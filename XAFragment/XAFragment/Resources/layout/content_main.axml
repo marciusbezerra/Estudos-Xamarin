@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main">
+    <Button
+        android:id="@+id/fragmentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Main Fragment"
+        android:layout_alignParentTop="true" />
+    <Button
+        android:id="@+id/dialogViewButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Dialog View Fragment"
+        android:layout_below="@id/fragmentButton" />
+    <Button
+        android:id="@+id/dialogAlertButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Dialog Alert Fragment"
+        android:layout_below="@id/dialogViewButton" />
+    <Button
+        android:id="@+id/dialogAlert2Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Dialog Alert 2"
+        android:layout_below="@id/dialogAlertButton" />
+    <Button
+        android:id="@+id/popupButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Popup Menu"
+        android:layout_below="@id/dialogAlert2Button" />
+    <Button
+        android:id="@+id/tabNavigationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Navegação com ABAs"
+        android:layout_below="@id/popupButton" />
+</RelativeLayout>

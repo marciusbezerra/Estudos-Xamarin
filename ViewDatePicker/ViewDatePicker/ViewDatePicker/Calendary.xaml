@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ViewDatePicker.Calendary">
+    <StackLayout Orientation="Vertical" VerticalOptions="Center">
+        <Label Text="DatePicker - XML" FontSize="20" HorizontalOptions="Center" TextColor="#e7d692"/>
+        <DatePicker
+            x:Name="ComponentDatePicker"
+            MinimumDate="01/01/1970"
+            MaximumDate="01/01.2100"
+            Format="dd/MM/yyyy"
+            DateSelected="DatePicker_DateSelected"
+            />
+        <Label x:Name="DateLabelCode" FontSize="30" HorizontalOptions="Center" TextColor="#e7d692"/>
+        <!--Também pode ser dessa maneira...-->
+        <!--<Label x:Name="DateLabelReference" Text="{Binding Date, Source={x:Reference ComponentDatePicker}}" FontSize="30" HorizontalOptions="Center" TextColor="#e7d692"/>-->
+        <Label x:Name="DateLabelContext" BindingContext="{x:Reference ComponentDatePicker}" Text="{Binding Date, StringFormat='{0:dd MMMM, yyyy}'}" FontSize="30" HorizontalOptions="Center" TextColor="#e7d692"/>
+    </StackLayout>
+</ContentPage>

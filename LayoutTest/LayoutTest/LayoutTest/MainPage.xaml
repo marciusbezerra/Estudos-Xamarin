@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LayoutTest"
+             x:Class="LayoutTest.MainPage">
+
+    <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Horizontal">
+            <Entry Placeholder="First Name" HorizontalOptions="FillAndExpand"></Entry>
+            <Entry Placeholder="Middle Name" HorizontalOptions="FillAndExpand"></Entry>
+            <Entry Placeholder="Last Name" HorizontalOptions="FillAndExpand"></Entry>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Entry Placeholder="CEP" HorizontalOptions="Start"></Entry>
+            <Entry Placeholder="Address" HorizontalOptions="FillAndExpand"></Entry>
+        </StackLayout>        
+        <Button Text="V. Center" VerticalOptions="Center"></Button>
+        <Button Text="V. CenterAndExpand" VerticalOptions="CenterAndExpand"></Button>
+        <Button Text="V. End" VerticalOptions="End"></Button>
+        <Button Text="V. EndAndExpand" VerticalOptions="EndAndExpand"></Button>
+        <Button Text="V. Fill" VerticalOptions="Fill"></Button>
+        <Button Text="V. FillAndExpand" VerticalOptions="FillAndExpand"></Button>
+        <Button Text="V. Start" VerticalOptions="Start"></Button>
+        
+        <Button Text="H. Center" HorizontalOptions="Center"></Button>
+        <Button Text="H. CenterAndExpand" HorizontalOptions="CenterAndExpand"></Button>
+        <Button Text="H. End" HorizontalOptions="End"></Button>
+        <Button Text="H. EndAndExpand" HorizontalOptions="EndAndExpand"></Button>
+        <Button Text="H. Fill" HorizontalOptions="Fill"></Button>
+        <Button Text="H. FillAndExpand" HorizontalOptions="FillAndExpand"></Button>
+        <Button Text="H. Start" HorizontalOptions="Start"></Button>        
+    </StackLayout>
+    <!--<StackLayout Orientation="Horizontal">
+        <Button Text="V. Center" VerticalOptions="Center"></Button>
+        <Button Text="V. CenterAndExpand" VerticalOptions="CenterAndExpand"></Button>
+        <Button Text="V. End" VerticalOptions="End"></Button>
+        <Button Text="V. EndAndExpand" VerticalOptions="EndAndExpand"></Button>
+        <Button Text="V. Fill" VerticalOptions="Fill"></Button>
+        <Button Text="V. FillAndExpand" VerticalOptions="FillAndExpand"></Button>
+        <Button Text="V. Start" VerticalOptions="Start"></Button>
+
+        <Button Text="H. Center" HorizontalOptions="Center"></Button>
+        <Button Text="H. CenterAndExpand" HorizontalOptions="CenterAndExpand"></Button>
+        <Button Text="H. End" HorizontalOptions="End"></Button>
+        <Button Text="H. EndAndExpand" HorizontalOptions="EndAndExpand"></Button>
+        <Button Text="H. Fill" HorizontalOptions="Fill"></Button>
+        <Button Text="H. FillAndExpand" HorizontalOptions="FillAndExpand"></Button>
+        <Button Text="H. Start" HorizontalOptions="Start"></Button>
+    </StackLayout>-->
+</ContentPage>

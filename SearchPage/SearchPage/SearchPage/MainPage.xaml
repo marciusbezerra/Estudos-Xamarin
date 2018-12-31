@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SearchPage"
+             BackgroundColor="White"
+             x:Class="SearchPage.MainPage"
+             Title="Cadastro de Produtos">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" Padding="5">
+            <Label x:Name="CategoryName" Text="Selecione a Categoria" FontSize="Medium" HorizontalOptions="StartAndExpand"/>
+            <Label x:Name="CategoryId" Text=">>" FontSize="Medium" HorizontalOptions="EndAndExpand"/>
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
+            </Label.GestureRecognizers>
+        </StackLayout>
+        <Entry Placeholder="Nome do Produto"></Entry>
+        <Entry Placeholder="Preço do Produto"></Entry>
+        <Entry Placeholder="Esqoque do Produto"></Entry>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+            <Button Text="Gravar" HorizontalOptions="StartAndExpand"/>
+            <Button Text="Cancelar" HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>
