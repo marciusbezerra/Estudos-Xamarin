@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinProgressBar"
+             x:Class="XamarinProgressBar.MainPage">
+
+    <StackLayout BackgroundColor="White">
+        <Label Text="Barra de Progresso" 
+               TextColor="Black"
+           HorizontalOptions="Center">
+        </Label>
+        <ProgressBar x:Name="BarraProgresso" BindingContext="{x:Reference Name=slider}" Progress="{Binding Path=Value}" WidthRequest="400" HeightRequest="20" VerticalOptions="Center" HorizontalOptions="Center"></ProgressBar>
+        <Label x:Name="label" Text="{Binding Progress,Source={x:Reference BarraProgresso}}" TextColor="Blue" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" />
+        <Slider x:Name="slider" Maximum="1" Minimum="0.1" VerticalOptions="CenterAndExpand" />
+        <Button x:Name="btnIniciar" Text="Iniciar Barra de Progresso" Clicked="btnIniciarClicked" />
+    </StackLayout>
+
+</ContentPage>

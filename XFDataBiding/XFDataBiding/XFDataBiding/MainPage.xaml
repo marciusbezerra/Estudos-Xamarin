@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XFDataBiding"
+             x:Class="XFDataBiding.MainPage">
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+                <Label Text="ROTAÇÃO" 
+               BindingContext="{x:Reference slider}" 
+               Rotation="{Binding Path=Value}"
+               FontAttributes="Bold"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand">
+                </Label>
+                <Slider x:Name="slider" Maximum="360"></Slider>
+                <Label BindingContext="{x:Reference slider}"
+               Text="{Binding Value, StringFormat='O ângulo é {0:F0} graus'}"
+               FontAttributes="Bold" 
+               FontSize="Large" 
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Center">
+                </Label>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+                <Label Text="DataBinding - Demo" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                <Label Text="Nome:"></Label>
+                <Entry Text="{Binding Nome, Mode=TwoWay}"></Entry>
+                <Label Text="Sobrenome:"></Label>
+                <Entry Text="{Binding Sobrenome, Mode=TwoWay}"></Entry>
+                <StackLayout Orientation="Horizontal" Padding="0,20,0,0">
+                    <Label Text="Seu nome é "></Label>
+                    <Label Text="{Binding Nome}"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Seu Sobrenome é "></Label>
+                    <Label Text="{Binding Sobrenome}"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Entry x:Name="entryCaracDescricao" HorizontalOptions="FillAndExpand"></Entry>
+                    <Entry x:Name="entryCaracValor" HorizontalOptions="FillAndExpand"></Entry>
+                    <Button Text="+" WidthRequest="35" Clicked="ButtonAddClicked"></Button>
+                    <Button Text="*" WidthRequest="35" Clicked="ButtonChangeLastClicked"></Button>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">\
+                    <ListView x:Name="ListViewItems">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding Descricao}" Detail="{Binding Valor}"></TextCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
